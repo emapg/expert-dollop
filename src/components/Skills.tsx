@@ -1,11 +1,14 @@
 import React from 'react';
+import { ReactIcon, NodeJs, Paintbrush, TypeScript, ThreeJs } from 'lucide-react';
 
 const skills = [
-  { name: "React", level: 90 },
-  { name: "TypeScript", level: 85 },
-  { name: "Node.js", level: 80 },
-  { name: "UI/UX Design", level: 75 },
-  { name: "Three.js", level: 70 }
+  { name: "React", level: 90, icon: <ReactIcon className="text-blue-500" /> },
+  { name: "TypeScript", level: 85, icon: <TypeScript className="text-blue-600" /> },
+  { name: "Node.js", level: 80, icon: <NodeJs className="text-green-500" /> },
+  { name: "UI/UX Design", level: 75, icon: <Paintbrush className="text-pink-500" /> },
+  { name: "Three.js", level: 70, icon: <ThreeJs className="text-purple-500" /> },
+  { name: "GraphQL", level: 65, icon: <ReactIcon className="text-pink-400" /> }, // Additional Skill
+  { name: "Docker", level: 60, icon: <ReactIcon className="text-blue-300" /> }, // Additional Skill
 ];
 
 export default function Skills() {
@@ -21,8 +24,11 @@ export default function Skills() {
               className="mb-8 transform-gpu hover:translate-x-2 transition-transform"
               style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}
             >
-              <div className="flex justify-between mb-2">
-                <span className="text-white font-medium">{skill.name}</span>
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-white font-medium flex items-center">
+                  <span className="mr-2 text-2xl">{skill.icon}</span>
+                  {skill.name}
+                </span>
                 <span className="text-gray-400">{skill.level}%</span>
               </div>
               <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
@@ -35,6 +41,10 @@ export default function Skills() {
           ))}
         </div>
       </div>
+      <footer className="mt-16 text-center text-gray-400">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>Connect with me on <a href="https://twitter.com" className="text-cyan-400">Twitter</a> and <a href="https://linkedin.com" className="text-cyan-400">LinkedIn</a>.</p>
+      </footer>
     </section>
   );
 }
