@@ -1,13 +1,13 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaPaintBrush, FaPython, FaJs, FaCss3Alt, FaGitAlt, FaDocker } from "react-icons/fa"; // Import from react-icons
-import { SiTypescript, SiThreeDotJs, SiGraphql, SiFirebase } from "react-icons/si"; // Specific icons
+import { FaReact, FaNodeJs, FaPaintBrush, FaPython, FaJs, FaCss3Alt, FaGitAlt, FaDocker, FaCube } from "react-icons/fa"; // Import icons
+import { SiTypescript, SiGraphql, SiFirebase } from "react-icons/si"; // Specific icons
 
 const skills = [
   { name: "React", level: 90, icon: <FaReact className="text-blue-500" /> },
   { name: "TypeScript", level: 85, icon: <SiTypescript className="text-blue-600" /> },
   { name: "Node.js", level: 80, icon: <FaNodeJs className="text-green-500" /> },
   { name: "UI/UX Design", level: 75, icon: <FaPaintBrush className="text-pink-500" /> },
-  { name: "Three.js", level: 70, icon: <SiThreeDotJs className="text-purple-500" /> },
+  { name: "Three.js", level: 70, icon: <FaCube className="text-purple-500" /> }, // Placeholder cube icon
   { name: "GraphQL", level: 65, icon: <SiGraphql className="text-pink-400" /> },
   { name: "Docker", level: 60, icon: <FaDocker className="text-blue-300" /> },
   { name: "Python", level: 75, icon: <FaPython className="text-yellow-400" /> },
