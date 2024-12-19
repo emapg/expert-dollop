@@ -1,5 +1,5 @@
-import React from 'react';
-import { ReactIcon, NodeJs, Paintbrush, TypeScript, ThreeJs } from 'lucide-react';
+import React from "react";
+import { ReactIcon, NodeJs, Paintbrush, TypeScript, ThreeJs, Graphql, Docker } from "lucide-react"; // Added proper imports for GraphQL and Docker
 
 const skills = [
   { name: "React", level: 90, icon: <ReactIcon className="text-blue-500" /> },
@@ -7,8 +7,13 @@ const skills = [
   { name: "Node.js", level: 80, icon: <NodeJs className="text-green-500" /> },
   { name: "UI/UX Design", level: 75, icon: <Paintbrush className="text-pink-500" /> },
   { name: "Three.js", level: 70, icon: <ThreeJs className="text-purple-500" /> },
-  { name: "GraphQL", level: 65, icon: <ReactIcon className="text-pink-400" /> }, // Additional Skill
-  { name: "Docker", level: 60, icon: <ReactIcon className="text-blue-300" /> }, // Additional Skill
+  { name: "GraphQL", level: 65, icon: <Graphql className="text-pink-400" /> }, // Corrected GraphQL icon
+  { name: "Docker", level: 60, icon: <Docker className="text-blue-300" /> }, // Corrected Docker icon
+  { name: "Python", level: 75, icon: <ReactIcon className="text-yellow-400" /> }, // Additional skill
+  { name: "JavaScript", level: 90, icon: <ReactIcon className="text-yellow-500" /> }, // Additional skill
+  { name: "CSS3", level: 85, icon: <ReactIcon className="text-blue-400" /> }, // Additional skill
+  { name: "Firebase", level: 70, icon: <ReactIcon className="text-orange-400" /> }, // Additional skill
+  { name: "Git", level: 80, icon: <ReactIcon className="text-red-400" /> }, // Additional skill
 ];
 
 export default function Skills() {
@@ -22,7 +27,7 @@ export default function Skills() {
             <div
               key={skill.name}
               className="mb-8 transform-gpu hover:translate-x-2 transition-transform"
-              style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}
+              style={{ "--delay": `${index * 100}ms` } as React.CSSProperties}
             >
               <div className="flex justify-between items-center mb-2">
                 <span className="text-white font-medium flex items-center">
@@ -43,7 +48,16 @@ export default function Skills() {
       </div>
       <footer className="mt-16 text-center text-gray-400">
         <p>&copy; 2024 Your Name. All rights reserved.</p>
-        <p>Connect with me on <a href="https://twitter.com" className="text-cyan-400">Twitter</a> and <a href="https://linkedin.com" className="text-cyan-400">LinkedIn</a>.</p>
+        <p>
+          Connect with me on{" "}
+          <a href="https://twitter.com" className="text-cyan-400">
+            Twitter
+          </a>{" "}
+          and{" "}
+          <a href="https://linkedin.com" className="text-cyan-400">
+            LinkedIn
+          </a>.
+        </p>
       </footer>
     </section>
   );
